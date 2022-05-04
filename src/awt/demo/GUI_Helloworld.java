@@ -36,7 +36,7 @@ public class GUI_Helloworld extends Frame {
         setLayout(null);
         setVisible(true);
     }
-    public static void main(String args[]) {
+    public static void main(String args[]) throws IOException {
         GUI_Helloworld f = new GUI_Helloworld();
     }
 }
