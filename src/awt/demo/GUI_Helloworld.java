@@ -1,8 +1,7 @@
 package awt.demo;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.io.IOException;
 
 public class GUI_Helloworld extends Frame {
@@ -32,9 +31,15 @@ public class GUI_Helloworld extends Frame {
         });
         add(closeBtn);
         setSize(700,300);
-        setTitle("This is our basic AWT example");
+        setTitle("AWT Intro");
         setLayout(null);
         setVisible(true);
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                dispose();
+            }
+        });
     }
     public static void main(String args[]) throws IOException {
         GUI_Helloworld f = new GUI_Helloworld();
